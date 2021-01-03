@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ./src",
-    "eslint:fix": "eslint --fix ./src"
+    "eslint:fix": "eslint --cache --fix ./src"
   },
   "author": "Tyler Durden",
   "license": "ISC",
