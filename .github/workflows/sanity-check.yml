@@ -1,0 +1,22 @@
+name: PR Sanity Check
+
+on: pull_request
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install packages
+        run: |
+          yarn install
+
+      - name: Run Linter
+        run: |
+          yarn run eslint
