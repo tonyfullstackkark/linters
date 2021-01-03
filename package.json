@@ -1,0 +1,32 @@
+{
+  "name": "linters",
+  "version": "1.0.0",
+  "description": "Linters examples",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint --fix ./src"
+  },
+  "author": "Tyler Durden",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "hooks": {
+      "*.js": [
+        "yarn run eslint:fix"
+      ]
+    }
+  }
+}
