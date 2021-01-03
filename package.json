@@ -23,10 +23,8 @@
     }
   },
   "lint-staged": {
-    "hooks": {
-      "*.js": [
-        "yarn run eslint:fix"
-      ]
-    }
+    "*.js": [
+      "yarn run eslint:fix"
+    ]
   }
 }
